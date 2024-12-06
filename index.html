@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing URL Decoding </title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <form @submit.prevent="submitForm">
+                <input type="url    " v-model="formData.url" placeholder="Enter Name" />
+                <button type="submit">Submit</button>
+            </form>
+
+            <div v-if="responseMessage">
+                <p>{{ responseMessage }}</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    formData: {
+        url: ''
+    
+      },
+                }
+            },
+            methods: {
+                async submitForm() {
+console.log(this.formData.url);
+
+                }
+
+            },
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
