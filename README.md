@@ -33,4 +33,4 @@ The repository contains the following files and directories:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/VideoHumanDetection.git
+   git clone https://github.com/dixitcoder/VideoHumanDetection.git
